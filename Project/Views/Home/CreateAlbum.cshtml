@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Create Album";
+}
+
+
+<div class="dl-horizontal">
+
+    <h1 class="display-6">Please Enter the new Album Details</h1>
+    <h3>If you require to add a new artist or track then please return to the <a asp-action="Index">home page.</a></h3>
+    <form method="POST" asp-controller="Home" asp-action="CreateAlbum">
+        <label for="Title">Album Name</label>
+        <br>
+        <input type="text" name="Title" id="Title" required>
+        <br>
+        <label for="ArtistID">Aritst Name</label>
+        <br>
+        <select name="ArtistID" id="ArtistID">
+        @foreach (var item in Model.artists)
+        {
+                <option value="@item.ArtistID">@item.Name</option>
+        }
+        </select>
+        <br>
+        <br>
+        <br>
+                <button type="submit">Submit</button>
+    </form>
+
+
+</div>

@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Tracks";
+}
+<h2>Update Details</h2>
+<hr />
+<div class="text-center">
+    <h1>Tracks</h1>
+    @foreach (var item in Model)
+    {
+        <a asp-controller="Home" asp-action="UpdateTrack" asp-route-id="@item.track.TrackID">@item.track.Name</a>
+        <br>
+        <br>
+    }
+
+
+</div>

@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Update Track";
+}
+<h2>Update Details</h2>
+<hr />
+<div>
+    <form method="POST">
+
+    @foreach (var item in Model)
+    {
+
+        <input type="hidden" name="id" value="@item.track.TrackID">
+        <br>
+        <label for="name">Track Name</label>
+        <br>
+        <input type="text" name="name" id="name" value="@item.track.Name">
+        <br>
+        break;
+    }        
+    <br> 
+    <button type="submit">Submit</button>
+    </form>
+</div>

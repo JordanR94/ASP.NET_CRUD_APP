@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Create Track";
+}
+
+
+<div class="dl-horizontal">
+
+    <h1 class="display-6">Please Enter a new Track</h1>
+
+    <form method="POST" asp-controller="Home" asp-action="CreateTrack">
+        <label for="Name">Track Name</label>
+        <br>
+        <input type="text" name="Name" id="Name" required>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+
+</div>

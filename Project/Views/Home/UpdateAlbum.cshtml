@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Update Album ";
+}
+<h2>Update Details</h2>
+<hr />
+<div>
+    <form method="POST">
+
+    @foreach (var item in Model)
+    {
+
+        <label for="title">Album Title</label>
+        <br>
+        <input type="text" name="title" id="title" value="@item.album.Title">
+        <br>
+        <input type="hidden" name="AlbID" value="@item.album.AlbumID">
+        <br>
+        <label for="name">Artist Name</label>
+        <br>
+        <input type="text" name="name" id="name" value="@item.artist.Name">
+        <br>
+        break;
+    }       
+    <br> 
+    <button type="submit">Submit</button>
+    </form>
+    <br>
+            @foreach (var item in Model)
+            {
+                 <p><a asp-action="Tracks" asp-route-id="@item.album.AlbumID">Update this albums tracks</a></p>
+                 break;
+            }
+       
+
+    
+</div>

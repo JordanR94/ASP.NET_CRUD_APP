@@ -1,0 +1,33 @@
+﻿@{
+        ViewData["Title"] = "Home Page";
+}
+
+
+
+<h2 class="display-4 mainHeading">Check out our Albums!</h2>
+<h2 class="mainHeading">OR</h2>
+<div class="row">
+        <p class="addItems"><a asp-action="CreateAlbum">Add New Album</a></p>
+        <p class="addItems"><a asp-action="CreateArtist">Add New Artist</a></p>
+        <p class="addItems"><a asp-action="CreateTrack">Add New Track</a></p>
+        <table class="table">
+                <thead class="thead-inverse">
+                        <tr>
+                                <th>Album Title</th>
+                        </tr>
+                </thead>
+
+                <tbody>
+                        @foreach (var item in Model)
+                        {
+                                <tr>
+                                        <td>
+                                                <a asp-controller="Home" asp-action="AlbumDetail"
+                                                asp-route-id="@item.AlbumID">@item.Title</a>
+                                        </td>
+                                </tr>
+                        }
+                </tbody>
+        </table>
+
+</div>

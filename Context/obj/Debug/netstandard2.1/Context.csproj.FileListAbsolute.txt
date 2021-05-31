@@ -1,0 +1,11 @@
+C:\Users\user\Desktop\CourseworkTwo\Context\bin\Debug\netstandard2.1\Context.deps.json
+C:\Users\user\Desktop\CourseworkTwo\Context\bin\Debug\netstandard2.1\Context.dll
+C:\Users\user\Desktop\CourseworkTwo\Context\bin\Debug\netstandard2.1\Context.pdb
+C:\Users\user\Desktop\CourseworkTwo\Context\bin\Debug\netstandard2.1\Entities.dll
+C:\Users\user\Desktop\CourseworkTwo\Context\bin\Debug\netstandard2.1\Entities.pdb
+C:\Users\user\Desktop\CourseworkTwo\Context\obj\Debug\netstandard2.1\Context.csprojAssemblyReference.cache
+C:\Users\user\Desktop\CourseworkTwo\Context\obj\Debug\netstandard2.1\Context.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\CourseworkTwo\Context\obj\Debug\netstandard2.1\Context.AssemblyInfo.cs
+C:\Users\user\Desktop\CourseworkTwo\Context\obj\Debug\netstandard2.1\Context.csproj.CopyComplete
+C:\Users\user\Desktop\CourseworkTwo\Context\obj\Debug\netstandard2.1\Context.dll
+C:\Users\user\Desktop\CourseworkTwo\Context\obj\Debug\netstandard2.1\Context.pdb

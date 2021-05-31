@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Delete Album";
+}
+<form method="POST" asp-controller="home" asp-action="Delete">
+
+    @foreach (var item in Model)
+    {
+
+        <h2>Are you sure you want to delete the album "@item.album.Title"?</h2>
+        <hr />
+        <input type="hidden" value="@item.album.AlbumID">
+
+    }
+    <button type="submit" onclick="return confirm('You are about to delete this album, are you sure?')">Yes!
+        Delete</button>
+</form>
+<br>
+<a asp-controller="Home" asp-action="Index">No! Return to Home</a>

@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Album Details ";
+}
+<h2>Album Details</h2>
+<hr />
+<div>
+
+    <dl class="dl-horizontal">
+
+        @foreach (var item in Model)
+        {
+
+            <dt>Album Title</dt>
+            <dd>@item.album.Title</dd>
+            <dt>Artist Name</dt>
+            <dd>@item.artist.Name</dd>
+            <dt>Tracks</dt>
+            foreach (var t in Model)
+            {
+                <dd>@t.track.Name</dd>
+            }
+            <dt>
+                Would you like to Add another Track to this album?
+            </dt>
+            <dd>
+                <a asp-controller="Home" asp-action="AddAnotherTrack" asp-route-id="@item.album.AlbumID">Click Here</a>
+            </dd>
+            <dt>
+                Would you like to Update this album?
+            </dt>
+            <dd>
+                <a asp-controller="Home" asp-action="UpdateAlbum" asp-route-id="@item.album.AlbumID">Click Here</a>
+            </dd>
+            <dt>
+                Would you like to delete this album?
+            </dt>
+            <dd>
+                <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.album.AlbumID">Click Here</a>
+            </dd>
+            break;
+        }
+    </dl>
+</div>

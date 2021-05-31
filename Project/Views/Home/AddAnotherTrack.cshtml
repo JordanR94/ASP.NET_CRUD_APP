@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Add Track";
+}
+
+
+<div class="dl-horizontal">
+
+    <h1 class="display-6">Select a new Track to add</h1>
+
+    <form method="POST" asp-controller="Home" asp-action="AddAnotherTrack">
+        <label for="TrackID">Tracks</label>
+        <br>
+        <select name="trackID" id="TrackID">
+            @foreach (var item in Model.tracks)
+            {
+                <option value="@item.TrackID">@item.Name</option>
+            }
+        </select>
+
+        <input type="hidden" name="albumID" value="@Model.AlbumId">
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+
+</div>
